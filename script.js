@@ -45,8 +45,13 @@ search.addEventListener('click', () => {
                 break;
 
               default:
-                image.src = 'images/clound.png';
-            }   
+                image.src = 'images/clouds.png';
+            }  
+            
+            temperature.innerHTML = `${parseInt(json.main.temp)}<span>°C</span>`;
+            description.innerHTML = `${json.weather[0].description}`;
+            humidity.innerHTNL = `${json.main.humidity}%`;
+            wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
             
           });
     
